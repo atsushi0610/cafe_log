@@ -8,4 +8,7 @@ class Drink < ActiveHash::Base
     { id: 6, name: 'アイスコーヒー' },
     { id: 7, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :memos
   end

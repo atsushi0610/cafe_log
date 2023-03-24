@@ -6,4 +6,7 @@ class Taste < ActiveHash::Base
     { id: 4, name: 'すっきり' },
     { id: 5, name: 'まろやか' }
   ]
+
+  include ActiveHash::Associations
+  has_many :memos
   end

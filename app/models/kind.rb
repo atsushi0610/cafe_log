@@ -10,4 +10,7 @@ class Kind < ActiveHash::Base
     { id: 8, name: 'カフェベース' },
     { id: 9, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :memos
   end
