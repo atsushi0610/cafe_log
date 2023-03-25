@@ -5,6 +5,7 @@ class Memo < ApplicationRecord
   belongs_to :aroma
   belongs_to :roast
   belongs_to :drink
+  has_one_attached :image
 
   validates :title, :impression, :date, presence: true
 
