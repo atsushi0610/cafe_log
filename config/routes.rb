@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "memos#index"
   devise_for :users
+  root to: "memos#index"
   resources :memos
 end
