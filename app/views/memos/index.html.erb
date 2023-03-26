@@ -1,2 +1,224 @@
-<h1>Memos#index</h1>
-<p>Find me in app/views/memos/index.html.erb</p>
+<%= render "shared/header" %>
+<div class='main'>
+
+  <%# 画面上部の「コーヒーを楽しもう」帯部分 %>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      「好き」を見つけませんか？
+    </h2>
+    <p class='service-explain'>
+      CAFE LOGはあなたのコーヒーライフをサポートする
+    </p>
+    <p class='service-explain'>
+      コーヒーメモアプリです
+    </p>
+    <div class='store-btn'>
+      <%= link_to image_tag("app-store.svg", class:"apple-btn"), "#" %>
+      <%= link_to image_tag("google-play.png", class:"google-btn"), "#" %>
+    </div>
+  </div>
+  <%# /画面上部の「コーヒーを楽しもう」帯部分  %>
+
+  <%# CAFE LOGの特徴部分 %>
+  <div class='select-reason-contents'>
+    <h2 class='title'>
+      CAFE LOGの特徴
+    </h2>
+    <ul class='reason-lists'>
+      <li class='list'>
+        <%= image_tag "furima-intro01.png", class:"list-pict" %>
+        <span class='reason-list-number'>1</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>コーヒーメモ</span>
+          を投稿できる！
+        </h3>
+        <p class='reason-list-description'>
+          飲んだコーヒーの記録を残せます！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "furima-intro02.png", class:"list-pict" %>
+        <span class='reason-list-number'>2</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>シンプル</span>
+          で使いやすい
+        </h3>
+        <p class='reason-list-description'>
+          画像と感想を投稿しましょう！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "furima-intro02.png", class:"list-pict" %>
+        <span class='reason-list-number'>2</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>コーヒー情報</span>
+          を配信します！
+        </h3>
+        <p class='reason-list-description'>
+          コーヒー選びの参考にしてください！
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /CAFE LOGの特徴部分 %>
+
+  <%# CAFE LOGの使い方 %>
+  <div class='feature-contents'>
+    <h2 class='title'>
+      CAFE LOGの使い方
+    </h2>
+    <ul class='feature-lists'>
+      <li class='list'>
+        <%= image_tag "furima-intro04.png", class:"list-pict" %>
+        <h3 class='feature-list-text'>
+          コーヒーメモを投稿しよう！
+        </h3>
+        <p class='feature-list-description'>
+          入力フォームに記入して投稿できます！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "furima-intro05.png", class:"list-pict" %>
+        <h3 class='feature-list-text'>
+          他のユーザーのメモにコメントしましょう！
+        </h3>
+        <p class='feature-list-description'>
+          気になるメモがあればコメントして交流しましょう！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "furima-intro06.png", class:"list-pict" %>
+        <h3 class='feature-list-text'>
+          コーヒー情報を活用しよう！
+        </h3>
+        <p class='feature-list-description'>
+          コーヒーを選ぶ際はコーヒー情報を参考にしてください！
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /CAFE LOGの使い方 %>
+
+<%# コーヒー情報一覧 %>
+  <div class='item-contents'>
+    <h2 class='title'>COLUMN</h2>
+    <div class="subtitle" >
+      コーヒー情報
+    </div>
+    <ul class='item-lists'>
+
+      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <div class='item-img-content'>
+          <%= image_tag "item-sample.png", class: "item-img" %>
+
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= "タイトル" %>
+          </h3>
+          <div class='item-price'>
+            <span><%= "ジャンル" %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+          <div class='item-price'>
+            <span><%= "日付" %></span>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+
+      <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+      <%# 商品がある場合は表示されないようにしましょう %>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            コーヒーを選ぶときの参考にしましょう！
+          </h3>
+           <div class='item-price'>
+            <span><%= "ジャンル" %></span>
+          </div>
+          <div class='item-price'>
+            <span><%= "日付" %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <%# //商品がある場合は表示されないようにしましょう %>
+      <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+    </ul>
+  </div>
+  <%# /コーヒー情報一覧 %>
+
+  <%# コーヒーメモ一覧 %>
+  <div class='item-contents'>
+    <h2 class='title'>TIME LINE</h2>
+    <div class="subtitle" >
+      最新のコーヒーメモ
+    </div>
+    <ul class='item-lists'>
+
+      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <div class='item-img-content'>
+          <%= image_tag "item-sample.png", class: "item-img" %>
+
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= "タイトル" %>
+          </h3>
+          <div class='item-price'>
+            <span><%= "日付" %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+
+      <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+      <%# 商品がある場合は表示されないようにしましょう %>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            コーヒーメモを投稿しよう！
+          </h3>
+          <div class='item-price'>
+            <span>2023年1月1日</span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <%# //商品がある場合は表示されないようにしましょう %>
+      <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
+    </ul>
+  </div>
+  <%# /コーヒーメモ一覧 %>
+</div>
+<%= link_to('#', class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>投稿する</span>
+  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
+<%= render "shared/footer" %>
