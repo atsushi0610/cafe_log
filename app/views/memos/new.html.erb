@@ -1,0 +1,97 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%# link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">
+      コーヒーメモを作成する
+      <span class="indispensable">必須項目</span>
+    </h2>
+    <%= form_with model: @memo, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 商品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックして画像をアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /商品画像 %>
+
+    <%# メモの内容 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        タイトル
+      </div>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          日付
+        </div>
+        <%= f.date_field :date, class:"form-control" %>
+      </div>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          感想
+        </div>
+        <%= f.text_area :impression, class:"items-text", id:"item-info", placeholder:"コーヒーの感想（1,000文字まで）（味、香り、飲み方など）例）コーヒーショップで購入したブレンドコーヒーです。ほんのりナッツの香りがします。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /メモの内容 %>
+
+    <%# メモの詳細 %>
+    <h2 class="items-sell-title">慣れてきたら詳細も記録しよう</h2>
+      <div class="weight-bold-text">
+        コーヒー豆のブランド
+      </div>
+      <%= f.text_area :title, class:"brand-text", id:"item-name", placeholder:"コーヒ豆のブランド", maxlength:"40" %>
+    <div class="items-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          コーヒーの味
+        </div>
+        <%= f.collection_select(:taste_id, Taste.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <div class="weight-bold-text">
+          コーヒーの香り
+        </div>
+        <%= f.collection_select(:aroma_id, Aroma.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+        <div class="weight-bold-text">
+          コーヒーの焙煎度
+        </div>
+        <%= f.collection_select(:roast_id, Roast.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <div class="weight-bold-text">
+          コーヒーの種類
+        </div>
+        <%= f.collection_select(:kind_id, Kind.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+        <div class="weight-bold-text">
+          コーヒーの飲み方
+        </div>
+        <%= f.collection_select(:drink_id, Drink.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+    <%# /メモの詳細 %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+  <footer class="items-sell-footer">
+    <%# link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+    <p class="inc">
+      ©︎CAFE LOG
+    </p>
+  </footer>
+</div>
