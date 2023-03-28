@@ -37,12 +37,6 @@ ActiveRecord::Schema.define(version: 2023_03_25_060948) do
     t.string "title", null: false
     t.date "date", null: false
     t.text "impression", null: false
-    t.string "brand"
-    t.integer "kind_id"
-    t.integer "taste_id"
-    t.integer "aroma_id"
-    t.integer "roast_id"
-    t.integer "drink_id"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

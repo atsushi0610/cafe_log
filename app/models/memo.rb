@@ -9,10 +9,4 @@ class Memo < ApplicationRecord
 
   validates :title, :impression, :date, presence: true
 
-  validates :kind_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :taste_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :aroma_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :roast_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :drink_id, numericality: { other_than: 1 , message: "can't be blank"}
-
 end

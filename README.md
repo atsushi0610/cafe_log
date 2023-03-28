@@ -16,12 +16,6 @@
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
 | title      | string     | null: false                    |
-| kind_id    | integer    | null: false                    |
-| taste_id   | integer    |                                |
-| aroma_id   | integer    |                                |
-| roast_id   | integer    |                                |
-| brand      | string     |                                |
-| drink_id   | integer    |                                |
 | impression | text       | null: false                    |
 | date       | date       | null: false                    |
 | user       | references | null: false, foreign_key: true |
