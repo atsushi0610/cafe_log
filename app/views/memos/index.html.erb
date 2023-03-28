@@ -1,23 +1,11 @@
 <%= render "shared/header" %>
 <div class='main'>
 
-  <%# 画面上部の「コーヒーを楽しもう」帯部分 %>
+  <%# 画面上部 %>
   <div class='title-contents'>
-    <h2 class='service-title'>
-      「好き」を見つけませんか？
-    </h2>
-    <p class='service-explain'>
-      CAFE LOGはあなたのコーヒーライフをサポートする
-    </p>
-    <p class='service-explain'>
-      コーヒーメモアプリです
-    </p>
-    <div class='store-btn'>
-      <%= link_to image_tag("app-store.svg", class:"apple-btn"), "#" %>
-      <%= link_to image_tag("google-play.png", class:"google-btn"), "#" %>
-    </div>
+    <%= link_to image_tag("cafelog.png", class:"main-pict"), "#" %>
   </div>
-  <%# /画面上部の「コーヒーを楽しもう」帯部分  %>
+  <%# /画面上部 %>
 
   <%# CAFE LOGの使い方 %>
   <div class='feature-contents'>
@@ -26,30 +14,21 @@
     </h2>
     <ul class='feature-lists'>
       <li class='list'>
-        <%= image_tag "furima-intro04.png", class:"list-pict" %>
-        <h3 class='feature-list-text'>
-          コーヒーメモを投稿しよう！
-        </h3>
+        <%= image_tag "cafelog-post.png", class:"list-pict" %>
         <p class='feature-list-description'>
-          入力フォームに記入して投稿できます！
+          飲んだコーヒーの感想を投稿しましょう
         </p>
       </li>
       <li class='list'>
-        <%= image_tag "furima-intro05.png", class:"list-pict" %>
-        <h3 class='feature-list-text'>
-          他のユーザーのメモにコメントしましょう！
-        </h3>
+        <%= image_tag "cafelog-comment.png", class:"list-pict" %>
         <p class='feature-list-description'>
-          気になるメモがあればコメントして交流しましょう！
+          投稿者同士で交流しましょう
         </p>
       </li>
       <li class='list'>
-        <%= image_tag "furima-intro06.png", class:"list-pict" %>
-        <h3 class='feature-list-text'>
-          コーヒー情報を活用しよう！
-        </h3>
+        <%= image_tag "cafelog-info.png", class:"list-pict" %>
         <p class='feature-list-description'>
-          コーヒーを選ぶ際はコーヒー情報を参考にしてください！
+          コーヒー情報を活用しましょう
         </p>
       </li>
     </ul>
@@ -58,17 +37,15 @@
 
 <%# コーヒー情報一覧 %>
   <div class='item-contents'>
-    <h2 class='title'>COLUMN</h2>
-    <div class="subtitle" >
-      コーヒー情報
-    </div>
+    <h2 class='title'>Topics</h2>
+    
     <ul class='item-lists'>
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <li class='list'>
         <%= link_to "#" do %>
         <div class='item-img-content'>
-          <%= image_tag "item-sample.png", class: "item-img" %>
+          <%= image_tag "cafelog-brand", class: "item-img" %>
 
         </div>
         <div class='item-info'>
@@ -94,10 +71,10 @@
       <%# 商品がある場合は表示されないようにしましょう %>
       <li class='list'>
         <%= link_to '#' do %>
-        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+        <%= image_tag "cafelog-info-sample", class: "item-img" %>
         <div class='item-info'>
           <h3 class='item-name'>
-            コーヒーを選ぶときの参考にしましょう！
+            コーヒーを選ぶときの参考にしよう
           </h3>
            <div class='item-price'>
             <span><%= "ジャンル" %></span>
@@ -120,54 +97,55 @@
 
   <%# コーヒーメモ一覧 %>
   <div class='item-contents'>
-    <h2 class='title'>TIME LINE</h2>
-    <div class="subtitle" >
-      最新のコーヒーメモ
-    </div>
+    <h2 class='title'>Time Line</h2>
+   
     <ul class='item-lists'>
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
-      <li class='list'>
-        <%= link_to "#" do %>
-        <div class='item-img-content'>
-          <%= image_tag "item-sample.png", class: "item-img" %>
-
-        </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
-            <%= "タイトル" %>
-          </h3>
-          <div class='item-price'>
-            <span><%= "日付" %></span>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+      <% @memos.each do |memo| %>
+        <li class='list'>
+          <%= link_to "#" do %>
+            <div class='item-img-content'>
+              <%= image_tag memo.image.variant(resize: '250x200'), class: 'item-image' if memo.image.attached? %>
             </div>
-          </div>
-        </div>
-        <% end %>
-      </li>
+            <div class='item-info'>
+              <h3 class='item-name'>
+                <%= memo.title %>
+              </h3>
+              <div class='item-price'>
+                <span><%= memo.date %></span>
+                <div class='star-btn'>
+                  <%= image_tag "star.png", class:"star-icon" %>
+                  <span class='star-count'>0</span>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
       <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
 
       <%# 商品がない場合は以下のダミー商品が表示されるようにしましょう %>
       <%# 商品がある場合は表示されないようにしましょう %>
-      <li class='list'>
-        <%= link_to '#' do %>
-        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
-        <div class='item-info'>
-          <h3 class='item-name'>
-            コーヒーメモを投稿しよう！
-          </h3>
-          <div class='item-price'>
-            <span>2023年1月1日</span>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+      <% if @memos.empty? %>
+        <li class='list'>
+          <%= link_to '#' do %>
+          <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+          <div class='item-info'>
+            <h3 class='item-name'>
+              コーヒーメモを投稿しよう
+            </h3>
+            <div class='item-price'>
+              <span>2023年1月1日</span>
+              <div class='star-btn'>
+                <%= image_tag "star.png", class:"star-icon" %>
+                <span class='star-count'>0</span>
+              </div>
             </div>
           </div>
-        </div>
-        <% end %>
-      </li>
+          <% end %>
+        </li>
+      <% end %>
       <%# //商品がある場合は表示されないようにしましょう %>
       <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
     </ul>

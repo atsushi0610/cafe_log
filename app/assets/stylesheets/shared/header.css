@@ -4,10 +4,10 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 2vh 5vw;
   display: flex;
   flex-direction: column;
-  background-color: #272727;
+  background-color: #cfdede;
 }
 
 .search-bar-contents {
@@ -16,14 +16,17 @@
   align-items: center;
 }
 
-.furima-icon {
-  width: 10vw;
-  margin-right: 10vw;
-  background-color: white;
+.logo {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: black;
+  font-family: YuMincho;
+  font-size: 20px;
+  width: 20%;
 }
 
 .search-form {
-  width: 65vw;
+  width: 55vw;
   height: 5vh;
   display: flex;
   margin-bottom: 5px;
@@ -39,7 +42,7 @@
   width: 5vh;
   border: 0;
   cursor: pointer;
-  background-color: darkorange;
+  background-color: black;
   padding: 8px;
 }
 
@@ -48,9 +51,10 @@
 }
 
 .nav {
-  font-size: 18px;
+  font-size: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
   padding: 1vh 0;
@@ -65,12 +69,14 @@
 .category-list {
   text-decoration: none;
   margin-right: 3vw;
-  color: darkorange;
+  color: black;
+  font-family: YuMincho;
 }
 
 .brand-list {
   text-decoration: none;
-  color: darkorange;
+  color: black;
+  font-family: YuMincho;
 }
 
 .lists-right {
@@ -83,24 +89,28 @@
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: darkorange;
   font-weight: bold;
+  color: black;
+  font-family: YuMincho;
 }
 
 
 .logout {
   text-decoration: none;
-  color: darkorange;
+  color: black;
+  font-family: YuMincho;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: darkorange;
+  color: black;
+  font-family: YuMincho;
 }
 
 .sign-up {
   text-decoration: none;
-  color: darkorange;
+  color: black;
+  font-family: YuMincho;
 }
