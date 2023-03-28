@@ -30,6 +30,13 @@
   margin-bottom: 30px;
 }
 
+.items-sell-title-sub {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 /* 共通 */
 .indispensable {
   background: #ea352d;
@@ -46,6 +53,13 @@
   min-width: 170px;
   margin-bottom: 10px;
   font-size: 20px;
+}
+
+.weight-bold-text-sub {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+  font-size: 15px;
 }
 
 .select-box {
@@ -109,7 +123,7 @@
 }
 
 .brand-text {
-  width: 100%;
+  width: 60%;
   padding: 16px 16px 8px;
   border-radius: 4px;
   border: 1px solid #ccc;

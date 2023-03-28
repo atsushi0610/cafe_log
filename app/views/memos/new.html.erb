@@ -48,30 +48,30 @@
     <%# /メモの内容 %>
 
     <%# メモの詳細 %>
-    <h2 class="items-sell-title">慣れてきたら詳細も記録しよう</h2>
-      <div class="weight-bold-text">
+    <h2 class="items-sell-title-sub">慣れてきたら詳細も記録しよう</h2>
+      <div class="weight-bold-text-sub">
         コーヒー豆のブランド
       </div>
       <%= f.text_area :title, class:"brand-text", id:"item-name", placeholder:"コーヒ豆のブランド", maxlength:"40" %>
     <div class="items-detail">
       <div class="form">
-        <div class="weight-bold-text">
+        <div class="weight-bold-text-sub">
           コーヒーの味
         </div>
         <%= f.collection_select(:taste_id, Taste.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-        <div class="weight-bold-text">
+        <div class="weight-bold-text-sub">
           コーヒーの香り
         </div>
         <%= f.collection_select(:aroma_id, Aroma.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
-        <div class="weight-bold-text">
+        <div class="weight-bold-text-sub">
           コーヒーの焙煎度
         </div>
         <%= f.collection_select(:roast_id, Roast.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-        <div class="weight-bold-text">
+        <div class="weight-bold-text-sub">
           コーヒーの種類
         </div>
         <%= f.collection_select(:kind_id, Kind.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
-        <div class="weight-bold-text">
+        <div class="weight-bold-text-sub">
           コーヒーの飲み方
         </div>
         <%= f.collection_select(:drink_id, Drink.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
