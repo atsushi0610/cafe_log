@@ -6,36 +6,29 @@ a {
   background: white;
 }
 
-/* 画面上部 */
+/* トップ画像 */
 .title-contents {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
   text-align: center;
-  margin: 30px 0;
+  margin: 80px 0 30px 0; 
 }
 
 .main-pict {
-  width: 50%;
+  width: 40%;
   border-radius: 10px;
 }
-
-/* //画面上部 */
+/* //トップ画像 */
 
 /* CAFE LOGの使い方 */
 .feature-contents {
   width: 100vw;
   padding: 10vh 15vw;
-  background-color: white;
 }
 
 .feature-contents>.title {
   text-align: center;
   font-size: 5vh;
   font-weight: bold;
-  margin-bottom: 5vh;
-  position: relative;
+  margin-bottom: 20px;
   color: black;
   font-family: YuMincho;
 }
@@ -69,18 +62,16 @@ a {
 }
 
 .feature-list-description {
-  font-size: 18px;
-  margin-top: 20px;
+  font-size: 20px;
+  margin-top: 10px;
   color: black;
   font-family: YuMincho;
 }
-
 /* //CAFE LOGの使い方 */
 
 /* コーヒー情報、コーヒーメモ一覧 */
 
 .item-contents {
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;

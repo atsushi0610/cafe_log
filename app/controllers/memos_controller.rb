@@ -16,6 +16,10 @@ class MemosController < ApplicationController
     end
   end
 
+  def show
+    @memo = Memo.find(params[:id])
+  end
+
   private
   def memo_params
     params.require(:memo).permit(:title, :date, :impression, :brand, :kind_id, :taste_id, :aroma_id, :roast_id, :drink_id, :image).merge(user_id: current_user.id)
