@@ -1,12 +1,13 @@
 <div class="items-sell-contents">
   <header class="items-sell-header">
-    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
-
+    <%= link_to image_tag('cafelog-logo.png' , class: "items-sell-header-logo", size: '185x80'), "/" %>
   </header>
+  <div class="items-sell-header-image">
+    <%= image_tag "cafelog-post-top.png", class: "items-sell-header-image" %>
+  </div>
   <div class="items-sell-main">
     <h2 class="items-sell-title">
-      コーヒーメモを作成する
-      <span class="indispensable">必須項目</span>
+      入力項目
     </h2>
     <%= form_with model: @memo, local: true do |f| %>
 

@@ -9,11 +9,24 @@
   align-items: center;
   flex-direction: column;
   min-width: 500px;
+  text-align: center;
 }
 
 .items-sell-header {
   padding: 5vh 0;
   text-align: center;
+  border-radius: 10px;
+}
+
+.items-sell-header-logo {
+  text-align: center;
+  border-radius: 10px;
+}
+
+.items-sell-header-image {
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  width: 70vw;
 }
 
 .items-sell-main {
@@ -21,6 +34,7 @@
   width: 70vw;
   min-width: 450px;
   padding: 10vh 15vw;
+  border-radius: 0 0 10px 10px;
 }
 
 .items-sell-title {
@@ -28,31 +42,17 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
-}
-
-.items-sell-title-sub {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
+  font-family: YuMincho;
 }
 
 /* 共通 */
-.indispensable {
-  background: #ea352d;
-  margin-left: 8px;
-  padding: 3px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-}
 
 .weight-bold-text {
   font-weight: bold;
   min-width: 170px;
   margin-bottom: 10px;
   font-size: 20px;
+  font-family: YuMincho;
 }
 
 .weight-bold-text-sub {
@@ -166,52 +166,6 @@
 
 /* /商品の詳細など */
 
-/* 販売価格 */
-.sell-price {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.price-content {
-  width: 300px;
-  border-bottom: 1px solid #ccc;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.price-text {
-  /* min-width: 170px; */
-  display: flex;
-  align-items: center;
-}
-
-.sell-yen {
-  font-size: 18px;
-}
-
-.price-input {
-  height: 30px;
-  text-align: right;
-  padding-right: 10px;
-}
-
-/* /販売価格 */
-
-/* 注意書き */
-.caution {
-  padding: 5vh 0;
-}
-
-.sentence>a {
-  color: #0099e8;
-  text-decoration: none;
-}
-
-/* /注意書き */
-
 /* 下部ボタン */
 .sell-btn-contents {
   width: 100%;
@@ -219,21 +173,26 @@
 }
 
 .sell-btn {
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
+  background: #cedfde;
+  border: 1px solid #cedfde;
+  border-radius: 10px;
+  color: black;
   width: 100%;
   height: 50px;
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 4vh;
+  font-family: YuMincho;
 }
 
 .back-btn {
   background: #aaa;
   border: 1px solid #aaa;
+  border-radius: 10px;
   color: #fff;
   padding: 15px 35%;
   text-decoration: none;
+  font-family: YuMincho;
+  font-size: 20px;
 }
 
 /* /下部ボタン */
@@ -262,5 +221,7 @@
 }
 
 .inc {
-  font-size: 13px;
+  font-size: 20px;
+  color: black;
+  font-family: YuMincho;
 }

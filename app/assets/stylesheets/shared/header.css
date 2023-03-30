@@ -18,36 +18,7 @@
 
 .logo {
   text-decoration: none;
-  margin-right: 3vw;
-  color: black;
-  font-family: YuMincho;
-  font-size: 20px;
-  width: 20%;
-}
-
-.search-form {
-  width: 55vw;
-  height: 5vh;
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.search-form>.input-box {
-  width: 100%;
-  height: 5vh;
-  padding-left: 10px;
-}
-
-.search-button {
-  width: 5vh;
-  border: 0;
-  cursor: pointer;
-  background-color: black;
-  padding: 8px;
-}
-
-.search-icon {
-  width: 100%;
+  border-radius: 10px;
 }
 
 .nav {
@@ -66,25 +37,11 @@
 
 }
 
-.category-list {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: black;
-  font-family: YuMincho;
-}
-
-.brand-list {
-  text-decoration: none;
-  color: black;
-  font-family: YuMincho;
-}
-
 .lists-right {
   display: flex;
   list-style: none;
   align-items: flex-end;
 }
-
 
 .user-nickname {
   text-decoration: none;
