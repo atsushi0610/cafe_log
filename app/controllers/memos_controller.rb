@@ -1,4 +1,6 @@
 class MemosController < ApplicationController
+  before_action :set_memo, only: [:edit, :show, :update]
+  
   def index
     @memos = Memo.all.order("created_at DESC")
   end
@@ -17,15 +19,12 @@ class MemosController < ApplicationController
   end
 
   def show
-    @memo = Memo.find(params[:id])
   end
 
   def edit
-    @memo = Memo.find(params[:id])
   end
 
   def update
-    @memo = Memo.find(params[:id])
     if @memo.update(memo_params)
       redirect_to memo_path(@memo.id)
     else
@@ -42,5 +41,9 @@ class MemosController < ApplicationController
   private
   def memo_params
     params.require(:memo).permit(:title, :date, :impression, :brand, :kind_id, :taste_id, :aroma_id, :roast_id, :drink_id, :image).merge(user_id: current_user.id)
+  end
+
+  def set_memo
+    @memo = Memo.find(params[:id])
   end
 end
