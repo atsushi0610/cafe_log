@@ -14,13 +14,20 @@
 }
 
 .second-fotter-text {
-  color: #333;
-  font-size: 12px;
-  margin: 0 10px;
+  color: black;
+  font-size: 20px;
+  margin: 0 30px;
+  font-family: YuMincho;
 }
 
 .second-fotter-logo {
   width: 185px;
   height: 49px;
   margin: 0 auto;
+}
+
+.copyright {
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: YuMincho;
 }
