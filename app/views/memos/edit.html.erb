@@ -51,10 +51,10 @@
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <div class="submit">
-        <%= f.submit "投稿する" ,class:"sell-btn" %>
+        <%= f.submit "変更する" ,class:"sell-btn" %>
       </div>
       <div class="back">
-        <%=link_to 'もどる', root_path, class:"back-btn" %>
+        <%=link_to 'もどる', memo_path(@memo.id), class:"back-btn" %>
       </div>
     </div>
     <%# /下部ボタン %>
