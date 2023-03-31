@@ -48,14 +48,21 @@
   margin-right: 3vw;
   font-weight: bold;
   color: black;
+  font-size: 25px;
   font-family: YuMincho;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
-
 
 .logout {
   text-decoration: none;
   color: black;
+  font-size: 25px;
   font-family: YuMincho;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .login {
@@ -63,11 +70,19 @@
   line-height: 32px;
   margin-right: 3vw;
   color: black;
+  font-size: 25px;
   font-family: YuMincho;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .sign-up {
   text-decoration: none;
   color: black;
+  font-size: 25px;
   font-family: YuMincho;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
 }

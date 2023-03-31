@@ -149,6 +149,7 @@
 .comment-btn {
   line-height: 48px;
   background-color: #cddfde;
+  border: 1px solid #cedfde;
   color: black;
   width: 50%;
   min-width: 150px;
