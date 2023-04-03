@@ -45,10 +45,15 @@
       <h4>＜コメント一覧＞</h4>
       <% @comments.each do |comment| %>
         <div class="comments-items">
-          <p>
-            <strong><%= comment.user.nickname %>：</strong>
-            <%= comment.comment %>
-          </p>
+          <div class="comments-date">
+            <%= l comment.created_at %>
+          </div>
+          <div class="comments-conntent">
+            <p>
+              <%= comment.user.nickname %>：
+              <%= comment.comment %>
+            </p>
+          </div>
         </div>
       <% end %>
     </div>

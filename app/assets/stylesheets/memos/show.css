@@ -168,16 +168,13 @@
 }
 
 .comments-items {
-  margin: 10px 0 10px 0;
+  margin: 20px 0;
   text-align: left;
-}
-
-.comments h4 {
   font-size: 20px;
   font-family: YuMincho;
 }
 
-.comments p {
+.comments h4 {
   font-size: 20px;
   font-family: YuMincho;
 }
