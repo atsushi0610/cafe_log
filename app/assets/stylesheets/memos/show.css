@@ -99,6 +99,7 @@
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+  font-family: YuMincho;
 }
 
 .favorite-star-icon {
@@ -115,6 +116,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: YuMincho;
 }
 
 .report-flag-icon {
@@ -125,7 +127,7 @@
 .comment-box {
   width: 40vw;
   background-color: #fff;
-  margin: 10px 0;
+  margin: 30px 0;
   text-align: center;
 }
 
@@ -136,13 +138,14 @@
   border: solid 2px #dedede;
   resize: none;
   border-radius: 10px;
+  font-family: YuMincho;
 }
 
 .comment-warn {
   padding: 10px;
   font-size: 14px;
   margin: 10px 0px;
-  text-align: left;
+  text-align: center;
   font-family: YuMincho;
 }
 
@@ -157,6 +160,26 @@
   font-family: YuMincho;
   border-radius: 10px;
   margin-bottom: 2vh;
+  margin-top: 20px;
+}
+
+.comments {
+  margin: 10px 0 60px 0;
+}
+
+.comments-items {
+  margin: 10px 0 10px 0;
+  text-align: left;
+}
+
+.comments h4 {
+  font-size: 20px;
+  font-family: YuMincho;
+}
+
+.comments p {
+  font-size: 20px;
+  font-family: YuMincho;
 }
 
 .links {

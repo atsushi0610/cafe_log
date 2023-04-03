@@ -20,6 +20,8 @@ class MemosController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @memo.comments.includes(:user)
   end
 
   def edit
