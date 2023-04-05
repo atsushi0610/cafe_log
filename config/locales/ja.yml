@@ -2,3 +2,13 @@ ja:
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
+
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      memo:
+        title: タイトル
+        image: 画像
+        impression: 感想
+        date: 日付

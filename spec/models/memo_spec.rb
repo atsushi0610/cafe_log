@@ -15,28 +15,27 @@ RSpec.describe Memo, type: :model do
       it '画像が空では投稿できない' do
         @memo.image = nil
         @memo.valid?
-        expect(@memo.errors.full_messages).to include("Image can't be blank")
+        expect(@memo.errors.full_messages).to include("画像を入力してください")
       end
       it 'タイトルが空では投稿できない' do
         @memo.title = ''
         @memo.valid?
-        expect(@memo.errors.full_messages).to include("Title can't be blank")
+        expect(@memo.errors.full_messages).to include("タイトルを入力してください")
       end
       it '日付が空では投稿できない' do
         @memo.date = ''
         @memo.valid?
-        expect(@memo.errors.full_messages).to include("Date can't be blank")
+        expect(@memo.errors.full_messages).to include("日付を入力してください")
       end
       it '感想が空では投稿できない' do
         @memo.impression = ''
         @memo.valid?
-        expect(@memo.errors.full_messages).to include("Impression can't be blank")
+        expect(@memo.errors.full_messages).to include("感想を入力してください")
       end     
       it 'ユーザーが紐付いていなければ投稿できない' do
         @memo.user = nil
-        binding.pry
         @memo.valid?
-        expect(@memo.errors.full_messages).to include('User must exist')
+        expect(@memo.errors.full_messages).to include('Userを入力してください')
       end
     end
   end
