@@ -60,9 +60,9 @@
 
     <div class="container">
       <% if user_signed_in? %>
-        <%= form_with(model: [@memo, @comment], local: true) do |form| %>
-          <%= form.text_area :comment, :class => 'comment-text', placeholder: "コメントする", rows: "2" %>
-          <%= form.submit "コメントする", :class => 'comment-btn' %>
+        <%= form_with(model: [@memo, @comment], local: true) do |f| %>
+          <%= f.text_area :comment, :class => 'comment-text', placeholder: "コメントする", rows: "2" %>
+          <%= f.submit "コメントする", :class => 'comment-btn' %>
         <% end %>
       <% else %>
         <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
