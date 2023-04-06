@@ -45,14 +45,23 @@
       <h4>＜コメント一覧＞</h4>
       <% @comments.each do |comment| %>
         <div class="comments-items">
-          <div class="comments-date">
-            <%= l comment.created_at %>
+          <div class="comments-item-left">
+            <div class="comments-date">
+              <%= l comment.created_at %>
+            </div>
+            <div class="comments-conntent">
+              <p>
+                <%= comment.user.nickname %>：
+                <%= comment.comment %>
+              </p>
+            </div>
           </div>
-          <div class="comments-conntent">
-            <p>
-              <%= comment.user.nickname %>：
-              <%= comment.comment %>
-            </p>
+          <div class="comments-item-right">
+            <% if user_signed_in? && current_user.id == comment.user_id %>
+              <div> 
+                <%= link_to '削除', memo_comment_path(@memo.id),class:"delete-btn", method: :delete %>
+              </div>
+            <% end %>
           </div>
         </div>
       <% end %>

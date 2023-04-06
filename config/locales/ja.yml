@@ -12,3 +12,5 @@ ja:
         image: 画像
         impression: 感想
         date: 日付
+      comment:
+        comment: コメント
