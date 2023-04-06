@@ -59,7 +59,7 @@
           <div class="comments-item-right">
             <% if user_signed_in? && current_user.id == comment.user_id %>
               <div> 
-                <%= link_to '削除', memo_comment_path(@memo.id),class:"delete-btn", method: :delete %>
+                <%= link_to '削除', memo_comment_path(@memo, comment),class:"delete-btn", method: :delete %>
               </div>
             <% end %>
           </div>

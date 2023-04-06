@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     comment = @memo.comments.find(params[:id])
     if current_user.id == comment.user.id
       comment.destroy
-    redirect_to memo_path(comment.memo.id)
+      redirect_back(fallback_location: root_path)
     else
       render "memos/show"
     end
