@@ -1,0 +1,30 @@
+<div class="item-contents">
+  <p class="user-name"><%= @nickname %>さんの投稿一覧</p>
+  <% @memos.each do |memo| %>
+    <ul class='item-lists'>
+      <li class='list'>
+        <%= link_to memo_path(memo.id) do %>
+          <div class='item-img-content'>
+            <%= image_tag memo.image, class: 'item-img' if memo.image.attached? %>
+          </div>
+          <div class='item-info'>
+            <h3 class='item-name'>
+              <%= memo.title %>
+            </h3>
+            <div class='item-price'>
+              <span><%= memo.date %></span>
+              <div class='star-btn'>
+                <%= image_tag "star.png", class:"star-icon" %>
+                <span class='star-count'>0</span>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    </ul>
+  <% end %>
+
+  <div class="back">
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+</div>
