@@ -56,8 +56,8 @@ https://docs.google.com/spreadsheets/d/1B4zIBxXlegSl5fXK2BI4eAFZAcpl9aYtGIF2fA9g
 [![Image from Gyazo](https://i.gyazo.com/ef1a14f8f4b3162da36b2255fe04352f.gif)](https://gyazo.com/ef1a14f8f4b3162da36b2255fe04352f)
 
 # 実装予定の機能
-コメント削除機能とユーザーマイページ機能を実装中です。
-今後、管理者(admin)管理機能とコーヒー情報投稿機能、お気に入り機能を実装し、各入力フォームのエラーメッセージを日本語表記に変更予定です。
+ユーザーマイページ機能を実装中です。
+今後、管理者(admin)管理機能とコーヒー情報投稿機能、お気に入り機能を実装予定です。
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/8ac935f9b5ad0decf804661b16f4bcf2.png)](https://gyazo.com/8ac935f9b5ad0decf804661b16f4bcf2)
