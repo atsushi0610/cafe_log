@@ -1,9 +1,9 @@
 <%= render "shared/header" %>
-<div class="main">
-  <div class="item-contents">
-    <p class="user-name"><%= @nickname %>さんの投稿一覧</p>
-    <% @memos.each do |memo| %>
-      <ul class='item-lists'>
+<div class='main'>
+  <div class='item-contents'>
+  <p class="user-name"><%= @nickname %>さんの投稿一覧</p>
+    <ul class='item-lists'>
+      <% @memos.each do |memo| %>
         <li class='list'>
           <%= link_to memo_path(memo.id) do %>
             <div class='item-img-content'>
@@ -23,12 +23,10 @@
             </div>
           <% end %>
         </li>
-      </ul>
-    <% end %>
-
+      <% end %>
+    </ul>
     <div class="back">
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
   </div>
 </div>
-
