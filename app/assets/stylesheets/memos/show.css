@@ -26,6 +26,13 @@
   padding: 1vh 5vw;
   border-radius: 10px;
   font-family: YuMincho;
+  box-shadow: 0 7px gray;
+}
+
+.item-edit-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
 }
 
 .item-destroy {
@@ -37,6 +44,13 @@
   padding: 1vh 5vw;
   border-radius: 10px;
   font-family: YuMincho;
+  box-shadow: 0 7px gray;
+}
+
+.item-destroy:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
 }
 /* /編集・削除ボタン */
 
@@ -162,6 +176,13 @@
   border-radius: 10px;
   margin-bottom: 2vh;
   margin-top: 20px;
+  box-shadow: 0 7px gray;
+}
+
+.comment-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
 }
 
 .comments {

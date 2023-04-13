@@ -55,8 +55,10 @@ https://docs.google.com/spreadsheets/d/1B4zIBxXlegSl5fXK2BI4eAFZAcpl9aYtGIF2fA9g
 ## コメント機能
 [![Image from Gyazo](https://i.gyazo.com/ef1a14f8f4b3162da36b2255fe04352f.gif)](https://gyazo.com/ef1a14f8f4b3162da36b2255fe04352f)
 
+## ユーザーマイページ
+[![Image from Gyazo](https://i.gyazo.com/c398702460af1ca0137b35ccb3084db2.png)](https://gyazo.com/c398702460af1ca0137b35ccb3084db2)
+
 # 実装予定の機能
-ユーザーマイページ機能を実装中です。
 今後、管理者(admin)管理機能とコーヒー情報投稿機能、お気に入り機能を実装予定です。
 
 # データベース設計

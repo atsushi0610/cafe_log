@@ -7,7 +7,6 @@
   justify-content: center;
 }
 
-/* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
   width: 50%;
   background-color: white;
@@ -68,6 +67,7 @@
   background: #fff;
   font-size: 16px;
   resize: none;
+  font-family: YuMincho;
 }
 
 .info-text {
@@ -83,47 +83,6 @@
 
 .form-info-text {
   font-size: 15px;
-}
-
-.input-name-wrap {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.input-name {
-  width: 130px;
-  margin: 5px 20px 0 20px;
-  height: 48px;
-  line-height: 30px;
-  padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 14px;
-  resize: none;
-}
-
-.input-birth-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.input-birth-wrap select {
-  width: 75px;
-  margin-top: 5px;
-  height: 45px;
-  padding-left: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.input-birth-wrap p {
-  line-height: 60px;
-  padding: 0 5px;
 }
 
 .field_with_errors {
@@ -159,8 +118,21 @@
   border: 1px solid #cddfde;
   border-radius: 10px;
   color: black;
+  opacity: 0.8;
   line-height: 48px;
   font-size: 20px;
   font-family: YuMincho;
   cursor: pointer;
+  box-shadow: 0 7px gray;
+}
+
+.register-red-btn:hover {
+  background: #cddfde;
+  opacity: 1;
+}
+
+.register-red-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
 }

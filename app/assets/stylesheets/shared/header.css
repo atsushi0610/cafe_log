@@ -34,7 +34,6 @@
 .lists-left {
   display: flex;
   min-width: 200px;
-
 }
 
 .lists-right {
@@ -51,8 +50,21 @@
   font-size: 25px;
   font-family: YuMincho;
   background-color: white;
+  opacity: 0.8;
   padding: 10px 20px;
   border-radius: 10px;
+  box-shadow: 0 7px gray;
+}
+
+.user-nickname:hover {
+  background-color: white;
+  opacity: 1;
+}
+
+.user-nickname:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
 }
 
 .logout {
@@ -61,8 +73,21 @@
   font-size: 25px;
   font-family: YuMincho;
   background-color: white;
+  opacity: 0.8;
   padding: 10px 20px;
   border-radius: 10px;
+  box-shadow: 0 7px gray;
+}
+
+.logout:hover {
+  background-color: white;
+  opacity: 1;
+}
+
+.logout:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
 }
 
 .login {
@@ -73,8 +98,21 @@
   font-size: 25px;
   font-family: YuMincho;
   background-color: white;
+  opacity: 0.8;
   padding: 10px 20px;
   border-radius: 10px;
+  box-shadow: 0 7px gray;
+}
+
+.login:hover {
+  background-color: white;
+  opacity: 1;
+}
+
+.login:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
 }
 
 .sign-up {
@@ -83,6 +121,19 @@
   font-size: 25px;
   font-family: YuMincho;
   background-color: white;
+  opacity: 0.8;
   padding: 10px 20px;
   border-radius: 10px;
+  box-shadow: 0 7px gray;
+}
+
+.sign-up:hover {
+  background-color: white;
+  opacity: 1;
+}
+
+.sign-up:active {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
 }
